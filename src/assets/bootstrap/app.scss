@@ -7,4 +7,103 @@
 .navbar-default .navbar-nav > .active > a:focus {
   color: #33e0ff;
   background-color: transparent;
+
+}
+
+
+html,body{
+  background: #1C1D1F;
+  color: white;
+  font-family: sans-serif;
+
+}
+
+.cross {
+	background: none;
+	border: none;
+	font-size: 42px;
+	float: right;
+}
+.stripForm{
+		background: #25aee3;
+    width: 100%;
+    height: 53px;
+    color: white
+} 
+.col-centered{
+    /*float: none;*/
+    text-align: center;
+
+}
+.pay {
+  color: #989BA2;
+}
+
+.billing {
+  border: 1px solid #34363a ;
+  height: 70px;
+  margin: 40px 0px;
+}
+
+.total{
+  margin: 40px 0px;
+}
+.subtotal {
+  border-bottom: 1px solid #989BA2 ;
+  margin-bottom: 15px;
+}
+
+.subtotal {
+  /*border-bottom: 1px solid #989BA2;*/
+}
+.top-margin{
+  margin-top: 10px; 
+}
+
+.set-font{
+  font-size: 27px;   
+}
+.billed{
+  color: #989BA2;
+}
+.saletax{
+  border-bottom: 1px solid #989BA2;
+}
+.prominent{
+  color: white;
+}
+.btn-color{
+  background: #25aee3;
+  width: 100%;
+  height: 53px;
+  color: white;
+  border-radius: 0;
+  font-size: 15px;
+}
+.space{
+  margin-top: 60px;
+}
+
+.transaction {
+  color: #989BA2 ;
+  margin-top: 15px;
+  font-size: 12px;
+  /* padding: 5px 20px; */
+  text-align: center;
+  padding-top: 5px;
+}
+
+label {
+  color: #989BA2;
+  font-size: 12px;
+
+}
+input.form-control {
+  background: #242528!important;
+  border: 1px solid #34363A;
+  color:  #fafafa;
+}
+
+.digit {
+  color: #fafafa;
 }

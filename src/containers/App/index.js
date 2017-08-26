@@ -34,7 +34,7 @@ class App extends React.Component {
           <Navbar.Header>
             <Navbar.Brand>
               <Link to="/" onClick={this.onNavItemClick}>
-                <span>HahooApp</span>
+                <span>Stripe</span>
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle />
@@ -46,11 +46,7 @@ class App extends React.Component {
                 About Us
               </ListItemLink>
             </Nav>
-            <Nav navbar pullRight>
-              <NavItem eventKey={1} onClick={this.onNavItemClick} target="_blank" title="View on Github" href="https://github.com/hahoocn/react-bootstrap-boilerplate">
-                <i className="fa fa-github" />
-              </NavItem>
-            </Nav>
+           
           </Navbar.Collapse>
         </Navbar>
         <div>

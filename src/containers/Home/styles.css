@@ -1,49 +1,83 @@
-.masthead {
-  background: #2d2d2d;
-  padding: 20px;
-  margin: 0;
+html,body{
+  background: #1C1D1F;
   color: white;
-  text-align: center;
+  font-family: sans-serif;
 
-  .logo {
-    margin: 20px 0 0;
+}
+.col-centered{
+    /*float: none;*/
+    text-align: center;
 
-    img {
-      width: 100px;
-      margin: auto;
-    }
-  }
-
-  h1 {
-    color: #33e0ff;
-    font-size: 4em;
-  }
-
-  h2 {
-    color: #ddd;
-    font-size: 2em;
-    margin: 20px;
-  }
-
-  a {
-    color: #ddd;
-  }
-
-  p {
-    margin: 10px;
-  }
-
-  .github {
-    font-size: 1.5em;
-  }
+}
+.pay {
+  color: #989BA2;
 }
 
-.content {
-  margin: 20px 0 0;
-  font-size: 20px;
-  text-align: center;
+.billing {
+  border: 1px solid #34363a ;
+  height: 70px;
+  margin: 40px 0px;
+}
 
-  div {
-    margin: 10px;
-  }
+.total{
+  margin: 40px 0px;
+}
+.subtotal {
+  border-bottom: 1px solid #989BA2 ;
+  margin-bottom: 15px;
+}
+
+.subtotal {
+  /*border-bottom: 1px solid #989BA2;*/
+}
+.top-margin{
+  margin-top: 10px; 
+}
+
+.set-font{
+  font-size: 27px;   
+}
+.billed{
+  color: #989BA2;
+}
+.saletax{
+  border-bottom: 1px solid #989BA2;
+}
+.prominent{
+  color: white;
+}
+.btn-color{
+  background: #25aee3;
+  width: 100%;
+  height: 53px;
+  color: white;
+  border-radius: 0;
+  font-size: 15px;
+}
+.space{
+  margin-top: 60px;
+}
+
+.transaction {
+  color: #989BA2 ;
+  margin-top: 15px;
+  font-size: 12px;
+  /* padding: 5px 20px; */
+  text-align: center;
+  padding-top: 5px;
+}
+
+label {
+  color: #989BA2;
+  font-size: 12px;
+
+}
+input.form-control {
+  background: #242528!important;
+  border: 1px solid #34363A;
+  color:  #fafafa;
+}
+
+.digit {
+  color: #fafafa;
 }
