@@ -107,3 +107,75 @@ input.form-control {
 .digit {
   color: #fafafa;
 }
+
+
+
+// custom form 
+
+
+.form {
+  width: 600px;
+  margin: 0 auto;
+  .error {
+    margin: 0;
+    margin-top: 5px;
+    span {
+      color: red;
+    }
+  }
+  .inputWrapper {
+    margin-bottom: 10px;
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input {
+      width: 400px;
+      padding: 8px 10px;
+    }
+  }
+  button {
+      border-style: solid;
+      border-width: 0px 0px 3px;
+      box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+      color: #FFFFFF;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-block;
+      font-style: normal;
+      overflow: hidden;
+      text-align: center;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      transition: all 200ms ease-in-out 0s;
+      white-space: nowrap;
+      font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+      font-weight: 700;
+      padding: 19px 39px 18px;
+      font-size: 18px;
+
+      &:not([disabled]) {
+        border-color: #326E99;
+        background-color: #3F8ABF;
+
+        &:hover, &:focus, &:active {
+          background-color: #397CAC;
+          border-color: #326E99;
+        }
+      }
+  }
+  .credit-card-number-wrapper {
+    img {
+      width: 53px;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
+
+  .form-errors {
+    background: #f5a0a0;
+    border: 1px solid red;
+    padding: 10px;
+    color: white;
+  }
+}

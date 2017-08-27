@@ -6,7 +6,7 @@ import { showHello, showHelloAsync, showMoviesAsync } from './actions';
 import logoImg from '../../assets/images/logo.jpg';
 import config from '../../config';
 import { selectInfo, selectHome } from './selectors';
-import Form from './Form'
+import StripeForm from './StripeForm'
 import './styles.css'
 import Modal from 'react-modal';
 class Home extends React.Component {
@@ -53,7 +53,7 @@ class Home extends React.Component {
             > 
               <button className="cross" onClick={this.closeModal} type="button" class="close"><span aria-hidden="true">×</span></button>
 
-              <Form/>
+              <StripeForm/>
             </Modal>
           </div>
         );

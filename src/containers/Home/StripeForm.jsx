@@ -7,7 +7,22 @@ import logoImg from '../../assets/images/logo.jpg';
 import config from '../../config';
 import { selectInfo, selectHome } from './selectors';
 import './styles.css'
-class Form extends React.Component {
+
+
+
+import scriptLoader from 'react-async-script-loader';
+import {
+  CreditCardNumberInput,
+  CreditCardExpiryInput,
+  CreditCardCVCInput,
+  FullNameInput
+} from '../credit-card-form/inputs';
+
+import Form from 'react-awesome-form-validator';
+import { isAlpha, isEmail } from 'validator';
+import Payment from 'payment';
+
+class StripeForm extends React.Component {
 
 
   render() {
@@ -110,7 +125,37 @@ class Form extends React.Component {
                      
                      <div className="form-group">
                        <label for="exampleInputPassword1">CARD NUMBER</label>
-                       <input type="text" className="form-control" id="exampleInputPassword1" placeholder="CARD NUMBER"/>
+                       <Form.CustomInput>
+                         <CreditCardNumberInput
+                           name='number'
+                           placeHolder='Enter your card number here...'
+                           fieldClassName='inputWrapper'
+                           type='text'
+                           label='CARD NUMBER *'
+                           validate={(value) => {
+                             let valid = true;
+                             let errorMessage = '';
+                             const creditCardNumber = value.replace(/ /g, '');
+                             const cardType = Payment.fns.cardType(value);
+                             if (!creditCardNumber.length) {
+                               valid = false;
+                               errorMessage = 'This field is required';
+                             } else if (cardType !== 'visa' && cardType !== 'mastercard' && cardType !== 'amex') {
+                               valid = false;
+                               errorMessage = 'This does not appear to be a valid credit card.';
+                             } else if ((cardType == 'visa' || cardType == 'mastercard') && creditCardNumber.length !== 16) {
+                               valid = false;
+                               errorMessage = 'Credit card number is invalid.';
+                             } else if (cardType == 'amex' && creditCardNumber.length !== 15) {
+                               valid = false;
+                               errorMessage = 'Credit card number is invalid.';
+                             }
+                             return { valid, errorMessage };
+                           }}
+                           startValidatingWhenIsPristine
+                         />
+
+                       </Form.CustomInput>
                      </div>
 
                      <div className="form-group">
@@ -154,7 +199,7 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+export default StripeForm;
 
 
 

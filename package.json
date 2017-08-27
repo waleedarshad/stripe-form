@@ -83,13 +83,17 @@
     "express-handlebars": "^3.0.0",
     "hahoorequest": "^0.6.2",
     "immutable": "^3.8.1",
+    "payment": "^2.3.0",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
+    "react-async-script-loader": "^0.3.0",
+    "react-awesome-form-validator": "^1.5.0",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4",
     "react-helmet": "^5.0.3",
     "react-modal": "^2.2.4",
     "react-redux": "^5.0.4",
+    "react-responsive-modal": "^1.7.1",
     "react-router-config": "^1.0.0-beta.3",
     "react-router-dom": "^4.1.1",
     "react-router-redux": "^5.0.0-alpha.6",
@@ -99,6 +103,7 @@
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.2.0",
     "reselect": "^3.0.0",
+    "validator": "^8.1.0",
     "webpack-isomorphic-tools": "^3.0.2"
   }
 }
