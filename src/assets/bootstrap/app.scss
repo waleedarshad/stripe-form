@@ -10,172 +10,112 @@
 
 }
 
+//colors
+$color_mirage_approx: #1c1d1f;
+$white: white;
+$color_scooter_approx: #25aee3;
+$color_star_dust_approx: #989ba2;
+$color_tuatara_approx: #34363a;
+$color_shark_approx: #242528;
+$alabaster: #fafafa;
+$color_thunderbird_approx: #bd1d1d;
 
-html,body{
-  background: #1C1D1F;
-  color: white;
-  font-family: sans-serif;
+//fonts
+$font_0: sans-serif;
 
+//@extend-elements
+//original selectors
+//html, body
+%extend_1 {
+  background: $color_mirage_approx;
+  color: $white;
+  font-family: $font_0;
 }
 
+
+html {
+  @extend %extend_1;
+}
+body {
+  @extend %extend_1;
+}
 .cross {
-	background: none;
-	border: none;
-	font-size: 42px;
-	float: right;
+  background: none;
+  border: none;
+  font-size: 42px;
+  float: right;
 }
-.stripForm{
-		background: #25aee3;
-    width: 100%;
-    height: 53px;
-    color: white
-} 
-.col-centered{
-    /*float: none;*/
-    text-align: center;
-
-}
-.pay {
-  color: #989BA2;
-}
-
-.billing {
-  border: 1px solid #34363a ;
-  height: 70px;
-  margin: 40px 0px;
-}
-
-.total{
-  margin: 40px 0px;
-}
-.subtotal {
-  border-bottom: 1px solid #989BA2 ;
-  margin-bottom: 15px;
-}
-
-.subtotal {
-  /*border-bottom: 1px solid #989BA2;*/
-}
-.top-margin{
-  margin-top: 10px; 
-}
-
-.set-font{
-  font-size: 27px;   
-}
-.billed{
-  color: #989BA2;
-}
-.saletax{
-  border-bottom: 1px solid #989BA2;
-}
-.prominent{
-  color: white;
-}
-.btn-color{
-  background: #25aee3;
+.stripForm {
+  background: $color_scooter_approx;
   width: 100%;
   height: 53px;
-  color: white;
+  color: $white;
+}
+.col-centered {
+  text-align: center;
+}
+.pay {
+  color: $color_star_dust_approx;
+}
+.billing {
+  border: 1px solid $color_tuatara_approx;
+  height: 70px;
+  margin: 40px 0;
+}
+.total {
+  margin: 40px 0;
+}
+.subtotal {
+}
+.top-margin {
+  margin-top: 10px;
+}
+.set-font {
+  font-size: 27px;
+}
+.billed {
+  color: $color_star_dust_approx;
+}
+.saletax {
+  border-bottom: 1px solid $color_star_dust_approx;
+}
+.prominent {
+  color: $white;
+}
+.btn-color {
+  background: $color_scooter_approx;
+  width: 100%;
+  height: 53px;
+  color: $white;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 0;
   font-size: 15px;
 }
-.space{
+.space {
   margin-top: 60px;
 }
-
 .transaction {
-  color: #989BA2 ;
+  color: $color_star_dust_approx;
   margin-top: 15px;
   font-size: 12px;
-  /* padding: 5px 20px; */
   text-align: center;
   padding-top: 5px;
 }
-
 label {
-  color: #989BA2;
+  color: $color_star_dust_approx;
   font-size: 12px;
-
+}
+.digit {
+  color: $alabaster;
+}
+.hide {
+  display: none;
+}
+.red {
+  color: $color_thunderbird_approx;
 }
 input.form-control {
-  background: #242528!important;
-  border: 1px solid #34363A;
-  color:  #fafafa;
-}
-
-.digit {
-  color: #fafafa;
-}
-
-
-
-// custom form 
-
-
-.form {
-  width: 600px;
-  margin: 0 auto;
-  .error {
-    margin: 0;
-    margin-top: 5px;
-    span {
-      color: red;
-    }
-  }
-  .inputWrapper {
-    margin-bottom: 10px;
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-    input {
-      width: 400px;
-      padding: 8px 10px;
-    }
-  }
-  button {
-      border-style: solid;
-      border-width: 0px 0px 3px;
-      box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-      color: #FFFFFF;
-      border-radius: 6px;
-      cursor: pointer;
-      display: inline-block;
-      font-style: normal;
-      overflow: hidden;
-      text-align: center;
-      text-decoration: none;
-      text-overflow: ellipsis;
-      transition: all 200ms ease-in-out 0s;
-      white-space: nowrap;
-      font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
-      font-weight: 700;
-      padding: 19px 39px 18px;
-      font-size: 18px;
-
-      &:not([disabled]) {
-        border-color: #326E99;
-        background-color: #3F8ABF;
-
-        &:hover, &:focus, &:active {
-          background-color: #397CAC;
-          border-color: #326E99;
-        }
-      }
-  }
-  .credit-card-number-wrapper {
-    img {
-      width: 53px;
-      vertical-align: middle;
-      margin-left: 10px;
-    }
-  }
-
-  .form-errors {
-    background: #f5a0a0;
-    border: 1px solid red;
-    padding: 10px;
-    color: white;
-  }
+  background: $color_shark_approx!important;
+  border: 1px solid $color_tuatara_approx;
+  color: $alabaster;
 }
